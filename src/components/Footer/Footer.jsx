@@ -1,7 +1,11 @@
+import './Footer.scss'
+
 const Footer = () => {
 	return (
-		<footer>
-			<p>footer</p>
+		<footer className="Footer">
+			<div className="ui-container">
+				<a className='ui-link' href="#" target="_blank">Github</a>
+			</div>
 		</footer>
 	)
 }

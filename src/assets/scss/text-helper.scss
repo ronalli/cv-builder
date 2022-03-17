@@ -1,0 +1,8 @@
+.ui-title-1, .ui-title-2, .ui-title-3, .ui-title-4, .ui-title-5, .ui-text {
+	cursor: pointer;
+	padding: 0 0.4rem;
+	transition: all 0.4s ease;
+	&:focus {
+		background-color: #f3f3f3;
+	}
+}

@@ -8,7 +8,13 @@ const Description = ({ isPrimary, isSecondary, className, children, ...attrs }) 
 	})
 
 	return (
-		<p className={classes} {...attrs}>{children}</p>
+		<p
+			className={classes}
+			contentEditable
+			suppressContentEditableWarning
+			spellCheck={false}
+			{...attrs}
+		>{children}</p>
 	)
 }
 

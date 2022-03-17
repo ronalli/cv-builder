@@ -1,4 +1,4 @@
-import { Header, Footer, Avatar } from './components'
+import { Header, Footer, Avatar, Title, Description } from './components'
 
 
 const App = () => {
@@ -15,8 +15,11 @@ const App = () => {
 			<div className="ui-content-wrapper">
 				<section className="ui-section">
 					<div className="ui-container">
+
 						<Avatar onClick={handleAvatarClick} />
-						<h1 className="ui-title-1">Hello world!</h1>
+						<Title size='1'>hello</Title>
+						<Description>world!</Description>
+
 					</div>
 				</section>
 			</div>

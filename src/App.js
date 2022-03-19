@@ -42,11 +42,14 @@ const App = () => {
 				<Wrapper>
 					<div className="ui-container">
 						<Row itemsCenter>
-							<Avatar onClick={handleAvatarClick} />
-							<div>
+							<Sidebar>
+								<Avatar onClick={handleAvatarClick} />
+							</Sidebar>
+
+							<Content>
 								<Title size='1'>hello</Title>
 								<Description>world!</Description>
-							</div>
+							</Content>
 						</Row>
 
 						<Row>

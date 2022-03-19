@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Header, Footer, Avatar, Range, Title, Description } from './components'
 
@@ -30,7 +31,9 @@ const Sidebar = styled.div`
 
 const App = () => {
 
-	const handleAvatarClick = () => console.log('avatar click')
+	const [skillsCounter, setSkillsCounter] = useState(1);
+	const [worksCounter, setWorksCounter] = useState(1);
+
 	const handlePrintClick = () => console.log('print click')
 
 	return (
@@ -43,7 +46,7 @@ const App = () => {
 					<div className="ui-container">
 						<Row itemsCenter>
 							<Sidebar>
-								<Avatar onClick={handleAvatarClick} />
+								<Avatar />
 							</Sidebar>
 
 							<Content>
@@ -68,13 +71,11 @@ const App = () => {
 								<Title size='3'>Education:</Title>
 								<Description>Dnipro University of Technology</Description>
 
-								<Title size="3" isUppercase style={{ marginTop: '3.6rem' }}>Work experience</Title>
-								<Description>Electrical engineer</Description>
+								<Title size="3" isUppercase isShowButton onClick={() => setWorksCounter(worksCounter + 1)} style={{ marginTop: '3.6rem' }}>Work experience</Title>
+								{new Array(worksCounter).fill(1).map((_, i) => <Description key={i}>Electrical engineer</Description>)}
 
-								<Title size="3" isUppercase style={{ marginTop: '3rem' }}>Skills:</Title>
-								<Range />
-								<Range />
-								<Range />
+								<Title size="3" isUppercase isShowButton onClick={() => setSkillsCounter(skillsCounter + 1)} style={{ marginTop: '3rem' }}>Skills:</Title>
+								{new Array(skillsCounter).fill(1).map((_, i) => <Range key={i} />)}
 
 							</Content>
 						</Row>

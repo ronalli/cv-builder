@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import propTypes from 'prop-types'
 import { useState, useEffect } from 'react'
 
+import { ReactComponent as CameraIcon } from '../../../assets/icons/camera.svg'
+
 const Wrapper = styled.div`
 	width: 10rem;
 	height: 10rem;
@@ -52,7 +54,7 @@ const Avatar = ({ isSquery }) => {
 							backgroundImage: `url(${preview})`,
 							backgroundSize: 'cover',
 						}} />
-						: 'upload image'
+						: <CameraIcon />
 				}
 			</label>
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Header, Footer, Avatar, Title, Description } from './components'
+import { Header, Footer, Avatar, Range, Title, Description } from './components'
 
 const Wrapper = styled.div`
 	max-width: 1200px;
@@ -72,6 +72,10 @@ const App = () => {
 								<Description>Electrical engineer</Description>
 
 								<Title size="3" isUppercase style={{ marginTop: '3rem' }}>Skills:</Title>
+								<Range />
+								<Range />
+								<Range />
+
 							</Content>
 						</Row>
 					</div>
